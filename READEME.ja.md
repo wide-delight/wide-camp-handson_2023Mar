@@ -7,6 +7,12 @@
 ##  Step.0 事前準備
 ### Metamask Walletのインストール
 
+https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=ja
+
+### infura.ioでのAPI Keyの使用
+
+https://www.infura.io/
+
 
 ## Step1. 
 
