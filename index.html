@@ -2,9 +2,78 @@
 <html lang="ja">
 <head>
   <title>Ðapps - Hello World</title>
-  <script type="text/javascript" src="app.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 </head>
 <body>
-  <div id="contract_result">loading...</div>
+  <div class="container text-center">
+    <h1 class="my-5">WIDE Camp 2023 Mar Handson</h1>
+
+    <div class="my-5">
+      <p class="h3">Step3-1. Connect Metamask</p>
+      <div id="metamask_state">未接続</div>
+      <input type="button" class="btn btn-primary mt-3" value="Connect Metamask" id="connectMetamask">
+    </section>
+
+    <hr class="my-4">
+
+    <section class="my-5">
+      <p class="h3">Step3-2. Issue Token</p>
+      <div class="form-group">
+        <p>「/Users/&lt; $USER &gt;/wide-camp-handson_2023Mar/filestorage/photo.jpg」を入力してください</p>
+        <input type="text" id="issue_token_input" class="form-control" placeholder="File URL Path">
+        <input type="button" class="btn btn-success mt-3" value="Issue Token" id="issueToken">
+      </div>
+    </section>
+
+    <hr class="my-4">
+
+    <section class="my-5">
+      <p class="h3 mb-3">Step3-3. View NFT Info</p>
+      <div class="row">
+        <div class="col-md-4">
+          <p>Total Supply: <div id="token_total_supply"></div></p>
+          <input type="button" class="btn btn-primary" value="Total Supply" id="callTotalSupply">
+        </div>
+        <div class="col-md-4">
+          <p>Name: <div id="token_name"></div></p>
+          <input type="button" class="btn btn-primary" value="Get Token Name" id="callName">
+        </div>
+        <div class="col-md-4">
+          <p>Symbol: <div id="token_symbol"></div></p>
+          <input type="button" class="btn btn-primary" value="Get Token Symbol" id="callSymbol">
+        </div>
+      </div>
+
+        <div class="form-group my-4">
+          <label for="input_token_uri" class="col-form-label">tokenURI:</label>
+          <input type="number" class="form-control" id="input_token_uri" placeholder="tokenId">
+          <input type="button" class="btn btn-primary" value="Get TokenURI" id="callTokenURI">
+          <p>Result:  <div id="token_uri"></div</p>
+        </div>
+
+        <div class="form-group my-4">
+          <label for="input_balance" class="col-form-label">balanceOf: </label>
+          <input type="text" class="form-control" id="input_token_balance" placeholder="Address">
+          <input type="button" class="btn btn-primary" value="Get Token Balance" id="callBalanceOf">
+          <p>Result:  <div id="token_balance"></div</p>
+        </div>
+    </section>
+
+    <hr class="my-4">
+
+    <section class="my-5">
+      <p class="h3">Step3-4. Etherscanを開く</p>
+      <input type="button" class="btn btn-secondary" value="Open Etherscan" id="openEtherscan">
+    </section>
+    
+  </div>
+
+  <script type="text/javascript" src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
