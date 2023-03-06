@@ -13,6 +13,9 @@ https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpg
 
 https://docs.metamask.io/guide/getting-started.html#basic-considerations
 
+### faucetからのTest Ethの取得
+
+https://goerlifaucet.com/
 
 以下のspled sheetにアドレスを貼り付けてください。
 

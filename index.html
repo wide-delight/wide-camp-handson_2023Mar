@@ -2,6 +2,11 @@
 <html lang="ja">
 <head>
   <title>Ðapps - Hello World</title>
+
+  <link rel="preload" href="./filestorage/images/photo.jpg" as="images" />
+  <link rel="manifest" href="./filestorage/metadatas/metadata.json" />
+  <link rel="preload" href="main.js" as="script" />
+
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -22,7 +27,7 @@
     <section class="my-5">
       <p class="h3">Step3-2. Issue Token</p>
       <div class="form-group">
-        <p>「/Users/&lt; $USER &gt;/wide-camp-handson_2023Mar/filestorage/photo.jpg」を入力してください</p>
+        <p>「http://127.0.0.1:5500/filestorage/metadatas/metadata.json」と入力してください</p>
         <input type="text" id="issue_token_input" class="form-control" placeholder="File URL Path">
         <input type="button" class="btn btn-success mt-3" value="Issue Token" id="issueToken">
       </div>
