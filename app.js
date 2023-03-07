@@ -4,8 +4,7 @@ const CONTRACT_ABI = "< ここにABIをペースト(配列データ) >";
 const CONTRACT_ADDRESS = "< ここにコントラクトアドレスをペースト >"
 const METAMASK_PASSWORD = "< ここにMetamask Walletパスワードをペースト >";
 const API_KEY = "fa48f1f1a46b43079288aa3ddfa97067"
-const INFURA_URL = `
-https://goerli.infura.io/v3/${API_KEY}`;
+const INFURA_URL = `https://sepolia.infura.io/v3/${API_KEY}`;
 //--------------------------
 
 let web3
@@ -24,6 +23,7 @@ const callName = document.querySelector('#callName');
 const callTokenURI = document.querySelector('#callTokenURI');
 const callBalanceOf = document.querySelector('#callBalanceOf');
 const callSymbol = document.querySelector('#callSymbol');
+const openEtherscan = document.querySelector('#openEtherscan');
 
 connectMetamask.addEventListener('click', async () => {
   let accounts = await ethereum.request({ method: 'eth_requestAccounts' })
@@ -68,13 +68,9 @@ callSymbol.addEventListener('click', async () => {
 
 async function _sendSignedTx(address, data) {
   const tx = {
-    nonce: "0x00",
-    gasPrice: "0x9af8da00",
-    gas: '0x186a0',
     to: CONTRACT_ADDRESS,
     from: address,
     data: data,
-    chainId: '0x5'
   }
   await ethereum.request({
     method: 'eth_sendTransaction',
@@ -82,6 +78,6 @@ async function _sendSignedTx(address, data) {
   });
 }
 
-function openEtherscan() {
-  window.open("https://goerli.etherscan.io/address/"+CONTRACT_ADDRESS)
-}
+openEtherscan.addEventListener("click", async () => {
+  window.open("https://sepolia.etherscan.io/address/"+CONTRACT_ADDRESS)
+})

@@ -9,7 +9,7 @@ Etereumブロックチェーンで簡易的なNFTアプリ開発について解�
 
 ### VScode/Live Serverのインストール(任意)
 本ハンズオンではVisual Studio Codeの使用を想定しています。
-また、HTMLをホスティングする簡易的なローカルサーバーの起動において、プラグインの「Live Server」を使用します。
+また、HTMLをホスティングする簡易的なローカルサーバーの起動において、プラグインの「Live Preview」を使用します。
 https://azure.microsoft.com/ja-jp/products/visual-studio-code
 
 同様の機能を使用可能な開発環境をすでに持っている方には、この手順は必要ありません。
@@ -30,7 +30,6 @@ https://docs.metamask.io/guide/getting-started.html#basic-considerations
 ### faucetからのTest ETHの取得
 
 
-https://goerlifaucet.com/
 
 以下のspled sheetにアドレスを貼り付けてください。
 
@@ -132,7 +131,7 @@ Step2-で控えておいたコントラクトアドレス、MetaMaskウォレッ
 
 次にContractのABIを設定します。
 Remix IDEを再度開き、「FILE EXPLORORER」ページに移動します。
-contracts/artifacts/build-infoフォルダ配下に、「DelightTokenModel_metadata.json」というファイルがあります。
+contracts/artifacts/build-infoフォルダ配下に、「DelightToken_metadata.json」というファイルがあります。
 ファイル内のoutput.abiの配列データをコピーします。
 ![](./images/3_0_copy_abi.png)
 
@@ -142,7 +141,7 @@ contracts/artifacts/build-infoフォルダ配下に、「DelightTokenModel_metad
 
 
 index.htmlを右クリックし、「Open With Live Server」をクリックします。
-すると[http://localhost:5500/index.html](http://localhost:5500/index.html)でWebアプリが起動します。
+すると[http://localhost:3000/index.html](http://localhost:3000/index.html)でWebアプリが起動します。
 
 ![](./images/3_0_webapp.png)
 
@@ -155,7 +154,7 @@ index.htmlを右クリックし、「Open With Live Server」をクリックし�
 ### Step3-2. NFTの発行
 
 
-input欄に「http://127.0.0.1:5500/filestorage/metadatas/metadata.json」を入力した状態で、「Issue Token」ボタンをクリックします。
+input欄に「http://127.0.0.1:3000/filestorage/metadatas/metadata.json」を入力した状態で、「Issue Token」ボタンをクリックします。
 ここで入力したファイルURIはtokenURIとしてNFTに設定されます。
 
 ![](./images/3_2_issue_token.png)
@@ -180,11 +179,11 @@ Webアプリには以下の機能を実装しました。
 
 ### Step3-5 NFTのメタデータ/画像を確認する。
 
-[http://localhost:5500/filestorage/metadatas/metadata.json](http://localhost:5500/filestorage/metadatas/metadata.json)を開くとメタデータが表示されます。
+[http://localhost:3000/filestorage/metadatas/metadata.json](http://localhost:3000/filestorage/metadatas/metadata.json)を開くとメタデータが表示されます。
 
 ![](./images/metadata.png)
 
 
-メタデータに表示された[http://localhost:5500/filestorage/images/photo.png](http://localhost:5500/filestorage/images/photo.png)を開くとNFTと紐付けた画像が表示されます。
+メタデータに表示された[http://localhost:3000/filestorage/images/photo.png](http://localhost:3000/filestorage/images/photo.png)を開くとNFTと紐付けた画像が表示されます。
 
 ![](./images/complete.png)
