@@ -7,7 +7,7 @@ Etereumブロックチェーンで簡易的なNFTアプリ開発について解�
 
 ##  Step.1 事前準備
 
-### VScode/Live Serverのインストール(任意)
+### VScode/Live Previewのインストール(任意)
 本ハンズオンではVisual Studio Codeの使用を想定しています。
 また、HTMLをホスティングする簡易的なローカルサーバーの起動において、プラグインの「Live Preview」を使用します。
 https://azure.microsoft.com/ja-jp/products/visual-studio-code
