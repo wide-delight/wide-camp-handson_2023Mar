@@ -29,9 +29,11 @@ https://docs.metamask.io/guide/getting-started.html#basic-considerations
 
 ### faucetからのTest ETHの取得
 
-
+Test ETHを取得します（今回は我々が配布します）
+https://www.alchemy.com/overviews/sepolia-testnet
 
 以下のspled sheetにアドレスを貼り付けてください。
+https://docs.google.com/spreadsheets/d/1KeGDIeuFov-7S5xz2IKmkme5ffamTRXCTVgOwffVq9k/edit?usp=sharing
 
 ### infura.ioでのAPI Keyの使用
 
