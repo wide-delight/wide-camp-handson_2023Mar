@@ -156,7 +156,7 @@ index.htmlを右クリックし、「Open With Live Server」をクリックし�
 ### Step3-2. NFTの発行
 
 
-input欄に「http://127.0.0.1:3000/filestorage/metadatas/metadata.json」を入力した状態で、「Issue Token」ボタンをクリックします。
+input欄に「http://127.0.0.1:3000/filestorage/metadatas/metadata.json 」を入力した状態で、「Issue Token」ボタンをクリックします。
 ここで入力したファイルURIはtokenURIとしてNFTに設定されます。
 
 ![](./images/3_2_issue_token.png)
